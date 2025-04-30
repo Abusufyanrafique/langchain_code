@@ -32,6 +32,7 @@ class GDRegressor:
             print("y_hat shape",y_hat.shape)
             intercept_der=-2*np.mean(y_train - y_hat)
             self.intercept_=self.intercept_ -(self.lr)
+            coef_der=-2*np.dot((y_train[i]))
         self.coef_=np.ones(X_train.shape[1])
         print(self.coef_,self.intercept_)
     def predict(self,X_test):
